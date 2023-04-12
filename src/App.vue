@@ -1,22 +1,35 @@
 <template>
-<div>SalomAlekum</div>
+  <div class="container-fluid">
+    <HeaderRow/>
+  </div>
+
+  <div class="container-fluid">
+
+    <div class="row">
+      <SideBar/>
+      <div class="col-12 col-md-9 mainBaruz">
+        <router-view/>
+      </div>
+    </div>
+
+    <FooterRow/>
+  </div>
+
 </template>
 
 <script>
 
 
+import HeaderRow from "@/components/HeaderRow.vue";
+import SideBar from "@/components/SideBar.vue";
+import FooterRow from "@/components/FooterRow.vue";
+
 export default {
   name: 'App',
+  components: {FooterRow, SideBar, HeaderRow},
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>

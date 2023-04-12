@@ -1,0 +1,52 @@
+body {
+
+  background-color: #959DA8;
+  color: white;
+
+}
+
+a {
+  color: yellow !important;
+}
+
+.navbaruz {
+   border-style: solid;
+   border-color: #BFC6D0;
+   background-color: #252d30;
+}
+
+.sideBaruz {
+  border-style: solid;
+  border-color: #BFC6D0;
+  background-color: #303f46;
+  color: white;
+
+}
+
+.mainBaruz {
+  border-style: solid;
+  border-color: #BFC6D0;
+  background-color: #303f46;
+  color: white;
+  padding: 20px;
+
+}
+
+.fotomaqola {
+border: 1px solid;
+border-radius: 10px;
+padding: 10px 10px 10px 10px;
+margin: 0 15px 0 0;
+
+
+}
+
+.footeruz {
+  padding: 0;
+}
+
+.activeuz {
+  background-color: #f6bb61;
+  color: black !important;
+  font-weight: bold;
+}
