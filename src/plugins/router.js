@@ -10,6 +10,10 @@ const routes = [
     {
         path: '/job-info',
         component: () => import('@/pages/JobInfoPage.vue')
+    },
+    {
+        path: '/login',
+        component: () => import('@/pages/LoginPage.vue')
     }
 ]
 
