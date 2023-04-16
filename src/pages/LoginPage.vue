@@ -18,7 +18,14 @@
           <input type="checkbox" class="form-check-input" id="exampleCheck1">
           <label class="form-check-label" for="exampleCheck1">Eslab qolish</label>
         </div>
-        <button type="submit" class="btn btn-primary">Kirish</button>
+
+          <span class="" role="status" aria-hidden="true"></span>
+
+
+
+        <button type="submit" class="btn btn-primary"><div v-if="loading" class="spinner-border spinner-border-sm" role="status"></div> Kirish</button>
+
+
       </form>
     </div>
   </div>
@@ -31,6 +38,7 @@ export default {
   name: "LoginPage",
   data(){
     return {
+      loading: null,
       error: null,
         form: {
           email: null,
@@ -41,12 +49,13 @@ export default {
   methods: {
     ...mapActions(['fetchLogin']),
     auth() {
-      console.log('Kirish bosildi')
+      this.loading = true
       this.fetchLogin(this.form)
           .then(() => {
             this.$router.push('/')
           })
           .catch(() => {
+            this.loading = null
             console.log('Login yoki parol xato!')
             this.error = 'Login yoki parol xato!';
           })

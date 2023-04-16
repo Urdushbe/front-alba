@@ -34,11 +34,13 @@
       <!-- Navbar stop -->
     </div>
   </div>
+
 </template>
 
 <script>
 export default {
-  name: "HeaderRow"
+  name: "HeaderRow",
+
 }
 </script>
 
