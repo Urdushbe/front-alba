@@ -8,7 +8,11 @@ const routes = [
         component: HomePage
     },
     {
-        path: '/job-info',
+        path: '/categories/:id',
+        component: HomePage
+    },
+    {
+        path: '/job-info/:id',
         component: () => import('@/pages/JobInfoPage.vue')
     },
     {

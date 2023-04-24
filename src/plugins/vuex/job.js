@@ -2,11 +2,16 @@ import axios from "@/plugins/vuex/axios";
 
 export default {
     actions: {
-        fetchJobs(context) {
-            console.log('fetchJobs ishladi')
+        fetchJobs(context, categoryId = null) {
+             let categoryUrl = ''
+
+            if (categoryId){
+                categoryUrl = '?category=' + categoryId
+            }
+
             return new Promise((resolve, reject) => {
                 axios
-                    .get('http://localhost:8888/api/jobs')
+                    .get('http://localhost:8888/api/jobs' + categoryUrl)
                     .then((response) => {
                         console.log('Ishlar ruyxati olindi')
                         console.log(response)
