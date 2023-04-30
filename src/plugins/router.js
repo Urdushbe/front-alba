@@ -12,7 +12,7 @@ const routes = [
         component: HomePage
     },
     {
-        path: '/job-info/:id',
+        path: '/job-info/:jobId',
         component: () => import('@/pages/JobInfoPage.vue')
     },
     {

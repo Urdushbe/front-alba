@@ -1,20 +1,20 @@
 <template>
-  <div class="row">
-    <div
-        v-for="job of getJobs"
-        :key="job.id"
-        class="col-12">
-      <h1>{{job.name}}</h1>
-      <p>{{job.text}}
-      </p>
-        <p>
-            Ishchi soni: {{ job.person }} kishi<br />
-            Manzil: {{ job.address }}<br />
-            Telefon raqam: {{ job.tel }}<br />
-            Bolim: {{ job.category }}
-        </p>
+    <div class="row">
+        <div class="col-12">
+            <h1>
+                {{ getJob.name }}
+            </h1>
+            <p>
+                {{ getJob.text }}
+            </p>
+            <p>
+                Ishchi soni: {{ getJob.person }} kishi <br/>
+                Manzil: {{ getJob.address }} <br/>
+                Telefon: {{ getJob.tel }} <br/>
+                Bo'lim {{ getJob.category }}
+            </p>
+        </div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -23,24 +23,24 @@
 import {mapActions, mapGetters} from "vuex";
 
 export default {
-  name: "JobInfoPage",
-    methods: {
-        ...mapActions(['fetchJobs'])
-    },
+    name: "JobInfoPage",
     computed: {
-        ...mapGetters(['getJobs'])
+        ...mapGetters(['getJob'])
+    },
+    methods: {
+        ...mapActions(['fetchJob'])
     },
     mounted() {
-        this.fetchJobs(this.$route.params.id)
-    },
-    watch: {
-        '$route.params.id'(){
-            console.log('watch ishladi')
-            this.fetchJobs(this.$route.params.id)
-        }
-    }
+        console.log(this.$route.params.jobId, 'Bu Job id')
+        this.fetchJob(this.$route.params.jobId)
+            .then(() => {
+                console.log(this.getJob)
+            })
 
+    }
 }
+
+
 </script>
 
 <style scoped>
