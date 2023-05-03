@@ -19,6 +19,15 @@ const routes = [
         path: '/login',
         component: () => import('@/pages/LoginPage.vue')
     }
+    ,
+    {
+        path: '/job-add',
+        component: () => import('@/pages/JobAdd.vue')
+    },
+    {
+        path: '/job-added',
+        component: () => import('@/pages/AddedJob.vue')
+    }
 ]
 
 export default createRouter({

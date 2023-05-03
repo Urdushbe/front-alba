@@ -3,9 +3,9 @@ import axios from "@/plugins/vuex/axios";
 export default {
     actions: {
         fetchJobs(context, categoryId = null) {
-             let categoryUrl = ''
+            let categoryUrl = ''
 
-            if (categoryId){
+            if (categoryId) {
                 categoryUrl = '?category=' + categoryId
             }
 
@@ -58,8 +58,26 @@ export default {
                         reject()
                     })
             })
-        }
+        },
 
+        pushJob(context, data) {
+            return new Promise((resolve, reject) => {
+                axios
+                    .post('http://localhost:8888/api/jobs', data)
+                    .then((response) => {
+                        console.log('pushJob ishladi')
+                        console.log(response)
+
+                        context.commit('updateJob', response.data)
+
+                        resolve()
+                    })
+                    .catch(() => {
+                        console.log('js dagi catch xatolik!')
+                        reject()
+                    })
+            })
+        },
     },
 
     mutations: {
@@ -68,7 +86,7 @@ export default {
         },
         updateJob(state, job) {
             state.job = job
-        }
+        },
     },
 
     state: {

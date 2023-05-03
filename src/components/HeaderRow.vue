@@ -18,7 +18,7 @@
                 <router-link class="nav-link active" aria-current="page" to="/login">Kirish</router-link>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Foydalanuvchilar</a>
+                <router-link class="nav-link" to="/job-add">Ish joylash</router-link>
               </li>
               <li class="nav-item">
                 <a class="nav-link disabled">Arxiv</a>
