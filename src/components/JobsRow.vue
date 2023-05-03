@@ -1,18 +1,16 @@
 <template>
   <div class="row">
-    <div
-        v-for="job of getJobs"
-        :key="job.id"
-        class="col-12 col-sm-6 col-xl-4">
-      <div class="fotomaqola mt-2" style="width: 17rem;">
-        <img src="/images/newwork.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title mt-2 ">{{job.name}}</h5>
-          <p class="card-text">{{job.person}} kishi</p>
-          <router-link :to="'/job-info/' + job.id" class="btn btn-warning activeuz">Batafsil</router-link>
-        </div>
+      <div class="col-12">
+          <div class="list-group mb-4">
+              <router-link
+                  v-for="job of getJobs"
+                  :key="job.id"
+                  :to="'/job-info/' + job.id"
+                  class="list-group-item list-group-item-action activeuz dark">
+                  {{ job.name }}
+              </router-link>
+          </div>
       </div>
-    </div>
   </div>
 </template>
 

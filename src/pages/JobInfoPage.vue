@@ -11,7 +11,6 @@
                 Ishchi soni: {{ getJob.person }} kishi <br/>
                 Manzil: {{ getJob.address }} <br/>
                 Telefon: {{ getJob.tel }} <br/>
-                Bo'lim {{ getJob.category }}
             </p>
         </div>
     </div>

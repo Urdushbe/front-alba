@@ -1,7 +1,7 @@
 <template>
   <div class="row">
     <div class="col p-0">
-      <div class="bg-dark pt-4 pb-5 text-center"><strong>&raquo; &copy; Onlayn Kutubxona</strong></div>
+      <div class="bg-dark pt-4 pb-5 text-center"><strong>&raquo; &copy; Urdushbek 2023</strong></div>
     </div>
   </div>
 </template>
