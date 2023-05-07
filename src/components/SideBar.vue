@@ -1,5 +1,5 @@
 <template>
-  <div class="col-12 col-md-3 sideBaruz">
+
       <button class="navbar-toggler activeuz" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapseExample" aria-controls="navbarSupportedContent" aria-expanded="false"
               aria-label="Toggle navigation">
@@ -18,7 +18,6 @@
         </div>
 
     </div>
-  </div>
 </template>
 
 <script>

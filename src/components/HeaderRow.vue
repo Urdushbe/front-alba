@@ -7,6 +7,9 @@
           <router-link class="navbar-brand btn" to="/">
             <ion-icon name="home-outline"></ion-icon>
           </router-link>
+
+            <SideBar/>
+
           <button class="navbar-toggler activeuz" type="button" data-bs-toggle="collapse"
                   data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                   aria-label="Toggle navigation">
@@ -38,8 +41,10 @@
 </template>
 
 <script>
+import SideBar from "@/components/SideBar.vue";
 export default {
   name: "HeaderRow",
+    components: {SideBar},
 
 }
 </script>
