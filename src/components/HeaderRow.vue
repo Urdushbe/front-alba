@@ -20,6 +20,9 @@
               <li class="nav-item">
                 <router-link class="nav-link active" aria-current="page" to="/login">Kirish</router-link>
               </li>
+                <li class="nav-item">
+                    <router-link class="nav-link active" aria-current="page" to="/registration">Ro'yxatdan o'tish</router-link>
+                </li>
               <li class="nav-item">
                 <router-link class="nav-link" to="/job-add">Ish joylash</router-link>
               </li>

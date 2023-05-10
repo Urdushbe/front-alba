@@ -18,8 +18,11 @@ const routes = [
     {
         path: '/login',
         component: () => import('@/pages/LoginPage.vue')
-    }
-    ,
+    },
+    {
+        path: '/registration',
+        component: () => import('@/pages/RegistrationPage.vue')
+    },
     {
         path: '/job-add',
         component: () => import('@/pages/JobAdd.vue')
@@ -27,6 +30,10 @@ const routes = [
     {
         path: '/job-added',
         component: () => import('@/pages/AddedJob.vue')
+    },
+    {
+        path: '/profile',
+        component: () => import('@/pages/ProfilePage.vue')
     }
 ]
 

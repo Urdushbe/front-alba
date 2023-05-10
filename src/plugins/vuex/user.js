@@ -21,8 +21,31 @@ export default {
                         console.log('Tugatildi')
                     })
             })
-        }
-    },
+        },
+
+        fetchReg(context, data) {
+            return new Promise((resolve, reject) => {
+                axios
+                    .post('http://localhost:8888/api/users/registration', data)
+                    .then((response) => {
+                        console.log('Ro`yxatdan o`tdingiz. Tabriklaymiz!')
+                        console.log(response)
+
+                        context.commit('updateToken', response.data.token)
+                        resolve()
+                    })
+                    .catch(() => {
+                        console.log('Ro`yxatdan o`tishda xatolik!')
+                        reject()
+                    })
+                    .finally(() => {
+                        console.log('Tugatildi')
+                    })
+            })
+        },
+
+
+},
 
     mutations: {
         updateToken(state, token) {

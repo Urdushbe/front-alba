@@ -34,6 +34,7 @@
 <script>
 import {mapActions} from "vuex";
 
+
 export default {
   name: "LoginPage",
   data(){
@@ -59,7 +60,8 @@ export default {
             console.log('Login yoki parol xato!')
             this.error = 'Login yoki parol xato!';
           })
-    }
+    },
+
   }
 }
 </script>

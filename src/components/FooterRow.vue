@@ -23,7 +23,7 @@
                 </div>
                 <div class="col my-auto">
                     <router-link class="nav-panel" to="/job-add">
-                        <svg xmlns="http://www.w3.org/2000/svg" style="width: 32px; height: 32px;" viewBox="0 0 24 24" class="icon" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" style="width: 32px; height: 32px;" viewBox="0 0 24 24" class="icon" stroke-width="2" stroke="black" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                             <path d="M9 12h6"></path>
                             <path d="M12 9v6"></path>
@@ -40,12 +40,13 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a class="nav-panel position-relative" href="https://uzfor.net/notifications.php">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon">
-                            <path d="M22.555,13.662l-1.9-6.836A9.321,9.321,0,0,0,2.576,7.3L1.105,13.915A5,5,0,0,0,5.986,20H7.1a5,5,0,0,0,9.8,0h.838a5,5,0,0,0,4.818-6.338ZM12,22a3,3,0,0,1-2.816-2h5.632A3,3,0,0,1,12,22Zm8.126-5.185A2.977,2.977,0,0,1,17.737,18H5.986a3,3,0,0,1-2.928-3.651l1.47-6.616a7.321,7.321,0,0,1,14.2-.372l1.9,6.836A2.977,2.977,0,0,1,20.126,16.815Z"></path>
+                    <router-link class="nav-panel position-relative" to="/profile">
+                        <svg xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
                         </svg>
-                        <span> Notify </span>
-                    </a>
+                        <span> Profile </span>
+                    </router-link>
                 </div>
             </div>
         </div>
